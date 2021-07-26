@@ -77,7 +77,7 @@ export function Feedback() {
         <div className="Feedback">
             <p><span id="step">want to provide some feedback?</span> let us know what works and what doesn't and how we can better create tools to help you manage your well-being!</p>
             {submitMessage && <div className="SubmitMessage">{submitMessage.text}</div>}
-            <form onSubmit={submitForm}>
+            <form onSubmit={submitForm} data-netlify-recaptcha="true">
                 <textarea onChange={updateFormControl} type="text" id="message" value={formState.message} placeholder=" message"></textarea>
                 <label htmlFor="email">Would you like to provide your email to receive future updates from wayve?</label>
                 <input onChange={updateFormControl} type="text" id="email" value={formState.email} placeholder=" email"></input>
