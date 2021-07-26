@@ -22,6 +22,11 @@ function App() {
   const handleButtonClick = () => {
     clearAll();
 
+    ReactGA.event({
+      category: 'MoodLog',
+      action: 'User cleared mood log'
+    });
+
     window.location.reload(false);
   }
 
