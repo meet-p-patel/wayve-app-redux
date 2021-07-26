@@ -1,0 +1,120 @@
+.MoodTracker {
+  background-color: white;
+  font-family: "Lato";
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+@media only screen and (min-width: 480px) {
+  .MoodTracker p {
+    font-size: 2.4rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+
+  #question {
+    color: #01609a;
+    font-style: italic;
+  }
+
+  option {
+    font-size: 2rem;
+    color: #1d1d1b;
+    font-weight: 300;
+  }
+
+  select {
+    border: 2px solid #01609a;
+    border-radius: 16px;
+    width: 400px;
+    height: 30px;
+  }
+
+  .logContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .moodLog {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+  }
+
+  #moodTime {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  #moodHist {
+    color: #01609a;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .MoodTracker p {
+    font-size: 2.1rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+
+  #question {
+    color: #01609a;
+    font-style: italic;
+  }
+
+  option {
+    font-size: 2rem;
+    color: #1d1d1b;
+    font-weight: 300;
+  }
+
+  select {
+    border: 2px solid #01609a;
+    border-radius: 16px;
+    width: 400px;
+    height: 30px;
+  }
+
+  .logContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .moodLog {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+  }
+
+  #moodTime {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  #moodHist {
+    color: #01609a;
+  }
+}

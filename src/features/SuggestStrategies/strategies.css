@@ -1,0 +1,152 @@
+.Strategies {
+  background-color: white;
+  font-family: "Lato";
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+#stress {
+  cursor: pointer;
+}
+
+#anxiety {
+  cursor: pointer;
+}
+
+#stratCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stressStrats {
+  margin-top: 2rem;
+  background: #ffffff;
+  border: 1px solid #f6f5f5;
+  box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.anxietyStrats {
+  margin-top: 2rem;
+  background: #ffffff;
+  border: 1px solid #f6f5f5;
+  box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .Strategies p {
+    font-size: 2.4rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+
+  #newTab {
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .topicSelect {
+    background-color: white;
+    height: auto;
+  }
+
+  .whiteTopic {
+    background: #ffffff;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+    width: 400px;
+    height: 7rem;
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: #01609a;
+    letter-spacing: -0.59px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .blueTopic {
+    background: #01609a;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+    width: 400px;
+    height: 7rem;
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: white;
+    letter-spacing: -0.59px;
+    text-align: center;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Strategies p {
+    font-size: 2.1rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+
+  #newTab {
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .topicSelect {
+    background-color: white;
+    height: auto;
+  }
+
+  .whiteTopic {
+    background: #ffffff;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+    width: 300px;
+    height: auto;
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: #01609a;
+    letter-spacing: -0.59px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .blueTopic {
+    background: #01609a;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+    width: 300px;
+    height: auto;
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: white;
+    letter-spacing: -0.59px;
+    text-align: center;
+    font-weight: 700;
+  }
+}

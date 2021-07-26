@@ -1,56 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { useEffect } from 'react';
+// import { Counter } from './features/counter/Counter';
+import { MoodTracker } from './features/MoodTracking/Mood';
+import { Strategies } from './features/SuggestStrategies/strategies';
+import { Social } from './features/Social/Social';
+import { Feedback } from './features/Feedback/Feedback';
 import './App.css';
+import ReactGA from 'react-ga';
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.initialize('UA-187817103-2');
+
+    // to report page view
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
+
+  const clearAll = () => {
+    return localStorage.clear()
+  }
+
+  const handleButtonClick = () => {
+    clearAll();
+
+    window.location.reload(false);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <h1>hi there!</h1>
+        <h2>welcome to wayve</h2>
+        <p id="intro">
+          we’re here to help you on your journey to improving your mental well-being! our goal is to help you recognize emotional patterns and learn coping skills to manage daily stress and anxiety
         </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
       </header>
+      <MoodTracker />
+      <button id="clear" type="button" onClick={handleButtonClick}>Clear your mood history</button>
+      <Strategies />
+      <Social />
+      <Feedback />
     </div>
   );
 }

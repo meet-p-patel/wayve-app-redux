@@ -1,0 +1,95 @@
+.Feedback {
+  background-color: white;
+  font-family: "Lato";
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+textarea {
+  width: 400px;
+  font-family: "Lato";
+}
+
+input {
+  width: 400px;
+  font-family: "Lato";
+}
+
+#message {
+  background: #ffffff;
+  border: 1px solid #01609a;
+  border-radius: 12px;
+  height: 10rem;
+}
+
+label {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#email {
+  margin-top: 2rem;
+  background: #ffffff;
+  border: 1px solid #01609a;
+  border-radius: 12px;
+  height: 3rem;
+}
+
+.SubmitButton {
+  margin-top: 2rem;
+  background: #01609a;
+  box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+  border-radius: 28px;
+  border-style: none;
+  color: white;
+  font-family: "Lato";
+  width: 180px;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.SubmitMessage {
+  font-family: "Lato";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #01609a;
+  margin-bottom: 2rem;
+}
+
+#recaptcha {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .Feedback p {
+    font-size: 2.4rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Feedback p {
+    font-size: 2.1rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+}
