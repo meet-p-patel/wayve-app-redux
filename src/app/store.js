@@ -30,7 +30,6 @@ const preloadedState = loadFromLocalStorage();
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     mood: moodReducer,
     strategies: strategiesReducer,
     btnColor: btnColorReducer
