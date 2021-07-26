@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import { Counter } from './features/counter/Counter';
 import { MoodTracker } from './features/MoodTracking/Mood';
 import { Strategies } from './features/SuggestStrategies/strategies';
 import { Social } from './features/Social/Social';

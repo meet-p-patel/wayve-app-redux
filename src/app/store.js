@@ -1,9 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 import moodReducer from '../features/MoodTracking/moodSlice';
 import strategiesReducer from '../features/SuggestStrategies/strategiesSlice';
 import btnColorReducer from '../features/SuggestStrategies/btnColorSlice'
-// import { storageAvailable } from '../util/LocalStorage';
 
 // convert object to string and store in localStorage
 function saveToLocalStorage(state) {
