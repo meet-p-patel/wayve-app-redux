@@ -14,7 +14,8 @@ export function MoodTracker() {
         {value: "overwhelmed", label: "😩 overwhelmed"},
         {value: "nervous", label: "😰 nervous"},
         {value: "angry", label: "😠 angry"},
-        {value: "tired", label: "😴 tired"}
+        {value: "tired", label: "😴 tired"},
+        {value: "happy", label: "😊 happy"}
     ]
 
     const hourConverter = (n) => {
