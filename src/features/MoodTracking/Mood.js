@@ -51,7 +51,7 @@ export function MoodTracker() {
     return (
         <div className="MoodTracker">
             <p><span id="step">step 1.</span> complete daily check-ins to track your emotions</p>
-            <p id="question">how are you feeling today? (select one)</p>
+            <p id="question">how are you feeling today?</p>
             <select onChange={handleMoodSelect}>
                 <option value="select mood">select</option>
                 {emotions.map((emotion) => <option key={emotion.label} value={emotion.value}>{emotion.label}</option>)}
