@@ -88,7 +88,7 @@
   select {
     border: 2px solid #01609a;
     border-radius: 16px;
-    width: 400px;
+    width: 375px;
     height: 30px;
   }
 
@@ -105,7 +105,7 @@
     border: 1px solid #f6f5f5;
     box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
     border-radius: 12px;
-    width: 400px;
+    width: 375px;
     text-align: center;
   }
 
