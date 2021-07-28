@@ -81,7 +81,7 @@ export function CheckBox() {
 
     return (
         <div className="CheckBox">
-            <p><span id="step">step 1.</span> complete daily check-ins to track your emotions</p>
+            <p><span id="step">part 1.</span> complete daily check-ins to track your emotions</p>
             <p id="question">how are you feeling today?</p>
             <form onSubmit={submitForm}>
                 {emotions.map((emotion, i) => <div key={i} id="emotions-map"><input type="checkbox" id={emotion.value} name={emotion.value} value={emotion.value} onChange={handleCheckboxSelect}/><label id="checkbox-tags">{emotion.label}</label></div>)}
