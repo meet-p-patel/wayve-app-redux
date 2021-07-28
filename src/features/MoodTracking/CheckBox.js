@@ -60,7 +60,7 @@ export function CheckBox() {
         } else {
             e.preventDefault();
             setErrorMessage({
-                text: 'Please select at least one option'
+                text: 'please select at least one option!'
             })
         }
     }
@@ -89,7 +89,7 @@ export function CheckBox() {
                 <textarea onChange={updateDetailsControl} type="text" id="details" value={detailsState.details} placeholder=" details"></textarea>
                 <button className="SubmitButton">Submit</button>
             </form>
-            {errorMessage && <p className="ErrorMessage">{errorMessage.text}</p>}
+            {errorMessage && <p id="errorMessage">{errorMessage.text}</p>}
         </div>
     )
 }
