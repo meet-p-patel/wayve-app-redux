@@ -1,0 +1,66 @@
+.CheckBox {
+  background-color: white;
+  font-family: "Lato";
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+textarea {
+  margin-top: 2rem;
+  width: 350px;
+  font-family: "Lato";
+  background: #ffffff;
+  border: 1px solid #01609a;
+  border-radius: 12px;
+  height: 10rem;
+}
+
+input {
+  margin-left: 32px;
+  width: auto;
+}
+
+#checkbox-tags {
+  margin-left: 32px;
+  font-size: 2rem;
+}
+
+#emotions-map {
+  margin-left: -32px;
+}
+
+@media only screen and (min-width: 480px) {
+  .CheckBox p {
+    font-size: 2.4rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+
+  #question {
+    color: #01609a;
+    font-style: italic;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .CheckBox p {
+    font-size: 2.1rem;
+    color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+  }
+
+  #step {
+    color: #ed715d;
+  }
+
+  #question {
+    color: #01609a;
+    font-style: italic;
+  }
+}

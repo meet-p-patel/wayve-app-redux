@@ -57,8 +57,15 @@
     font-weight: 700;
   }
 
-  #moodHist {
+  #moods {
     color: #01609a;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  #showDetails {
+    font-size: 1.75rem;
+    font-weight: 700;
   }
 }
 
@@ -114,7 +121,14 @@
     font-weight: 700;
   }
 
-  #moodHist {
+  #moods {
     color: #01609a;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  #showDetails {
+    font-size: 1.75rem;
+    font-weight: 700;
   }
 }
