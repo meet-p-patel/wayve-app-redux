@@ -3,20 +3,12 @@ import { useDispatch } from 'react-redux';
 import { addMood } from './moodSlice';
 import './CheckBox.css';
 import ReactGA from 'react-ga';
+import { emotions_data } from '../../data/emotions';
 
 export function CheckBox() {
     const dispatch = useDispatch();
 
-    const emotions = [
-        {id: 1, value: "excited", label: "😃 excited"},
-        {id: 2, value: "confused", label: "🤔 confused"},
-        {id: 3, value: "sad", label: "😔 sad"},
-        {id: 4, value: "overwhelmed", label: "😩 overwhelmed"},
-        {id: 5, value: "nervous", label: "😰 nervous"},
-        {id: 6, value: "angry", label: "😠 angry"},
-        {id: 7, value: "tired", label: "😴 tired"},
-        {id: 8, value: "happy", label: "😊 happy"}
-    ];
+    const emotions = emotions_data;
 
     const hourConverter = (n) => {
         if (n > 12) {
