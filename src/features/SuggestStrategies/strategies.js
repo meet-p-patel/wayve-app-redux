@@ -110,7 +110,6 @@ export function Strategies() {
 
     return (
         <div className="Strategies">
-            <p><span id="step">part 2.</span> discover potential coping strategies <span id="newTab">(click on a topic below!)</span></p>
             <div className="topicSelect">
                     <button id="stress" className={btnClassStress} onClick={handleStressSelect}>stress</button>
                     <div id="stratCards">

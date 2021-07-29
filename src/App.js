@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MoodTracker } from './features/MoodTracking/Mood';
 import { Strategies } from './features/SuggestStrategies/strategies';
-import { Social } from './features/Social/Social';
 import { Feedback } from './features/Feedback/Feedback';
 import './App.css';
 import ReactGA from 'react-ga';
@@ -26,6 +25,36 @@ function App() {
     window.location.reload(false);
   }
 
+  const [showStrategyComponent, setShowStrategyComponent] = useState(false);
+
+  const handleStrategiesClick = () => {
+    setShowStrategyComponent(!showStrategyComponent);
+  }
+
+  function strategiesVisible() {
+    if (showStrategyComponent === true ) {
+      return <Strategies />
+    } else {
+      return 
+    }
+  }
+
+  function showClickTopic() {
+    if (showStrategyComponent === true) {
+      return <span id="clickTopic">(click on a topic below!)</span>
+    } else {
+      return
+    }
+  }
+
+  function buttonValue() {
+    if (showStrategyComponent === true) {
+      return 'hide'
+    } else {
+      return 'show'
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -38,8 +67,8 @@ function App() {
       <CheckBox />
       <MoodTracker />
       <button id="clear" type="button" onClick={handleButtonClick}>Clear your mood history</button>
-      <Strategies />
-      <Social />
+      <p id="steps"><span id="step">part 2.</span> discover potential coping strategies {showClickTopic()}</p><button id="toggle" onClick={handleStrategiesClick}>{buttonValue()}</button>
+      {strategiesVisible()}
       <Feedback />
     </div>
   );
