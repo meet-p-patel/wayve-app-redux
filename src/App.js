@@ -32,7 +32,7 @@ function App() {
         <h1>hi there!</h1>
         <h2>welcome to wayve</h2>
         <p id="intro">
-          we want to build a product to help you better manage your mental well-being! to start, our goal is to help you recognize emotional patterns and learn coping skills to manage daily stress and anxiety.  before we create and launch our app, we want to gather feedback and test features you might like.  take a look at our mood tracking feture below and let us know what else you'd like to use!
+          we want to build a product to help you better manage your mental well-being! to start, our goal is to help you recognize emotional patterns and learn coping skills to manage daily stress and anxiety.  before we create and launch our app, we want to gather feedback and test features you might like.  take a look at our mood tracking feature below and let us know what else you'd like to use!
         </p>
       </header>
       <CheckBox />

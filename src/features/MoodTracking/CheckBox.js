@@ -8,15 +8,15 @@ export function CheckBox() {
     const dispatch = useDispatch();
 
     const emotions = [
-        {value: "excited", label: "😃 excited"},
-        {value: "confused", label: "🤔 confused"},
-        {value: "sad", label: "😔 sad"},
-        {value: "overwhelmed", label: "😩 overwhelmed"},
-        {value: "nervous", label: "😰 nervous"},
-        {value: "angry", label: "😠 angry"},
-        {value: "tired", label: "😴 tired"},
-        {value: "happy", label: "😊 happy"}
-    ]
+        {id: 1, value: "excited", label: "😃 excited"},
+        {id: 2, value: "confused", label: "🤔 confused"},
+        {id: 3, value: "sad", label: "😔 sad"},
+        {id: 4, value: "overwhelmed", label: "😩 overwhelmed"},
+        {id: 5, value: "nervous", label: "😰 nervous"},
+        {id: 6, value: "angry", label: "😠 angry"},
+        {id: 7, value: "tired", label: "😴 tired"},
+        {id: 8, value: "happy", label: "😊 happy"}
+    ];
 
     const hourConverter = (n) => {
         if (n > 12) {
@@ -24,7 +24,7 @@ export function CheckBox() {
         } else {
             return n;
         }
-    }
+    };
 
     const secondConverter = (n) => {
         if (n < 10) {
@@ -32,23 +32,26 @@ export function CheckBox() {
         } else {
             return n;
         }
-    }
+    };
 
     const initialDetailsState = {
         details: ''
     };
 
     const [detailsState, setDetailsState] = useState(initialDetailsState);
-    const [checkedState, setCheckedState] = useState([]);
+    const [checkedState, setCheckedState] = useState({
+        emotions: emotions,
+        selected: []
+    });
     const [errorMessage, setErrorMessage] = useState();
 
     const submitForm = (e) => {
         
         let currentDate = new Date();
 
-        if (checkedState.length > 0) {
+        if (checkedState.selected.length > 0) {
             dispatch(addMood({date: `${(currentDate.getMonth())+1}-${currentDate.getDate()}-${currentDate.getFullYear()} at ${hourConverter((currentDate.getHours()))}:${secondConverter(currentDate.getMinutes())}:${secondConverter(currentDate.getSeconds())}`,
-                            mood: checkedState,
+                            mood: checkedState.selected,
                             details: detailsState.details
             }));
 
@@ -73,18 +76,41 @@ export function CheckBox() {
         setDetailsState(updatedDetailsState);
     }
 
-    const handleCheckboxSelect = (event) => {
-        const emotions = [];
-        emotions.push(...checkedState, event.target.value)
-        setCheckedState(emotions);
-    }
+    function onChange(value) {
+        let selected = checkedState.selected
+        let find = selected.indexOf(value)
+      
+        if(find > -1) {
+          selected.splice(find, 1)
+        } else {
+          selected.push(value)
+        }
+
+        let temp = {
+            emotions: emotions,
+            selected: selected
+        }
+      
+        setCheckedState(temp)
+      }
 
     return (
         <div className="CheckBox">
             <p><span id="step">part 1.</span> complete daily check-ins to track your emotions</p>
-            <p id="question">how are you feeling today?</p>
+            <p id="question">how are you feeling today? (select one or more)</p>
             <form onSubmit={submitForm}>
-                {emotions.map((emotion, i) => <div key={i} id="emotions-map"><input type="checkbox" id={emotion.value} name={emotion.value} value={emotion.value} onChange={handleCheckboxSelect}/><label id="checkbox-tags">{emotion.label}</label></div>)}
+                {checkedState.emotions.map((item) =>
+                    <div key={item.id} id="emotions-map">
+                    <label key={ item.id }>
+                                <input type="checkbox" 
+                                onChange={() => onChange(item.value)} 
+                                selected={ checkedState.selected.includes(item.id) }
+                                ></input>
+                                <span id="checkbox-tags">{ item.label }</span>
+                    </label>
+                    </div> 
+                )
+                }
                 <label htmlFor="descrip">would you like to provide details?</label>
                 <textarea onChange={updateDetailsControl} type="text" id="details" value={detailsState.details} placeholder=" details"></textarea>
                 <button className="SubmitButton">Submit</button>
