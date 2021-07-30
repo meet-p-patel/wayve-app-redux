@@ -88,7 +88,7 @@ export function Feedback() {
                     onChange={updateRecaptchaToken}
                 />
                 <button disabled={submitting} className="SubmitButton">
-                    {submitting ? 'Submitting...' : 'Submt'}
+                    {submitting ? 'Submitting...' : 'Submit'}
                 </button>
             </form>
         </div>

@@ -47,7 +47,7 @@ export function Todo() {
     <div className="TodoList">
       <input type="text" id="addTodo" onChange={handleChange} value={todoItem} placeholder=" add items here!"></input>
       <button id="addBtn" onClick={add}>add</button>
-      {message && message}
+      {message && <p id="error">{message}</p>}
       <br></br>
       {todoList.map((item) => <div key={item.id} id="list">
                                 {item.completed === true && <span id="completed">completed!</span>}

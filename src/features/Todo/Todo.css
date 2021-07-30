@@ -53,6 +53,13 @@
   margin-left: 2rem;
 }
 
+#error {
+  font-family: "Lato";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #01609a;
+}
+
 @media only screen and (min-width: 480px) {
   #list {
     margin-top: 1rem;
