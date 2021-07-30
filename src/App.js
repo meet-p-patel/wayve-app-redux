@@ -5,6 +5,7 @@ import { Feedback } from './features/Feedback/Feedback';
 import './App.css';
 import ReactGA from 'react-ga';
 import { CheckBox } from './features/MoodTracking/CheckBox';
+import { Todo } from './features/ToDo/Todo'; 
 
 function App() {
 
@@ -26,14 +27,27 @@ function App() {
   }
 
   const [showStrategyComponent, setShowStrategyComponent] = useState(false);
+  const [showTodosComponent, setShowTodosComponent] = useState(false);
 
   const handleStrategiesClick = () => {
     setShowStrategyComponent(!showStrategyComponent);
   }
 
+  const handleTodosClick = () => {
+    setShowTodosComponent(!showTodosComponent);
+  }
+
   function strategiesVisible() {
     if (showStrategyComponent === true ) {
       return <Strategies />
+    } else {
+      return 
+    }
+  }
+
+  function todosVisible() {
+    if (showTodosComponent === true ) {
+      return <Todo />
     } else {
       return 
     }
@@ -47,8 +61,16 @@ function App() {
     }
   }
 
-  function buttonValue() {
+  function buttonValueStrat() {
     if (showStrategyComponent === true) {
+      return 'hide'
+    } else {
+      return 'show'
+    }
+  }
+
+  function buttonValueTodo() {
+    if (showTodosComponent === true) {
       return 'hide'
     } else {
       return 'show'
@@ -66,9 +88,12 @@ function App() {
       </header>
       <CheckBox />
       <MoodTracker />
-      <button id="clear" type="button" onClick={handleButtonClick}>Clear your mood history</button>
-      <p id="steps"><span id="step">part 2.</span> discover potential coping strategies {showClickTopic()}</p><button id="toggle" onClick={handleStrategiesClick}>{buttonValue()}</button>
+      <p id="steps"><span id="step">part 2.</span> discover potential coping strategies {showClickTopic()}</p><button id="toggle" onClick={handleStrategiesClick}>{buttonValueStrat()}</button>
       {strategiesVisible()}
+      <p id="steps"><span id="step">part 3.</span> create a to-do list to help you track wellness strategies and activities that work for you</p><button id="toggle" onClick={handleTodosClick}>{buttonValueTodo()}</button>
+      {todosVisible()}
+      <p id="infoOnClear">if you ever want to clear your mood log and your to-do list, click the button below:</p>
+      <button id="clear" type="button" onClick={handleButtonClick}>clear your mood history and your to-do list</button>
       <Feedback />
     </div>
   );

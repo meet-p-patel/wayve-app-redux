@@ -19,7 +19,7 @@ export function MoodTracker() {
             </select> */}
             <div className="logContainer">
             {mood.map((eachMood, i) => <div className="moodLog" key={i}>
-                                            <p id="moodTime" key={eachMood.date}>Your check in on {eachMood.date}:</p>
+                                            <p id="moodTime" key={eachMood.date}>your check in on {eachMood.date}:</p>
                                             <p id="moodHist" key={eachMood.name}>{eachMood.mood.map((txt, i) => <span key={i} id="moods">{txt}<br></br></span>)}</p>
                                             <p id="showDetails">{eachMood.details}</p>
                                        </div>

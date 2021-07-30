@@ -4,14 +4,13 @@
 
 #clear {
   margin-left: 32px;
-  margin-top: 2rem;
   background: #01609a;
   box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
   border-radius: 28px;
   border-style: none;
   color: white;
   font-family: "Lato";
-  width: 180px;
+  width: 300px;
   height: 3rem;
   cursor: pointer;
 }
@@ -71,6 +70,14 @@
     margin-left: 32px;
   }
 
+  #infoOnClear {
+    font-size: 2.4rem;
+    color: #d14734;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+    margin-left: 32px;
+  }
+
   #step {
     color: #ed715d;
   }
@@ -117,6 +124,14 @@
   #steps {
     font-size: 2.1rem;
     color: #1d1d1b;
+    letter-spacing: -0.58px;
+    font-weight: 900;
+    margin-left: 32px;
+  }
+
+  #infoOnClear {
+    font-size: 2.1rem;
+    color: #d14734;
     letter-spacing: -0.58px;
     font-weight: 900;
     margin-left: 32px;

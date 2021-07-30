@@ -1,0 +1,166 @@
+.TodoList {
+  background-color: white;
+  font-family: "Lato";
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+#addTodo {
+  margin-top: 2rem;
+  background: #ffffff;
+  border: 1px solid #01609a;
+  border-radius: 12px;
+  height: 3rem;
+  width: 275px;
+  margin-left: 0px;
+  margin-right: 2rem;
+}
+
+#addBtn {
+  margin-top: 2rem;
+  background: #01609a;
+  box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+  border-radius: 28px;
+  border-style: none;
+  color: white;
+  font-family: "Lato";
+  width: 55px;
+  height: 3rem;
+  cursor: pointer;
+}
+
+#clearBtn {
+  margin-top: 2rem;
+  background: #01609a;
+  box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+  border-radius: 28px;
+  border-style: none;
+  color: white;
+  font-family: "Lato";
+  width: auto;
+  height: 3rem;
+  cursor: pointer;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#completed {
+  font-size: 2.1rem;
+  color: #ed715d;
+  letter-spacing: -0.58px;
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+@media only screen and (min-width: 480px) {
+  #list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+    width: 400px;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+  }
+
+  #removeBtn {
+    background: #01609a;
+    box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+    border-radius: 28px;
+    border-style: none;
+    color: white;
+    font-family: "Lato";
+    width: 175px;
+    height: 3rem;
+    cursor: pointer;
+    margin-left: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  #completeBtn {
+    background: #01609a;
+    box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+    border-radius: 28px;
+    border-style: none;
+    color: white;
+    font-family: "Lato";
+    width: 175px;
+    height: 3rem;
+    cursor: pointer;
+    margin-left: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  #todoItem {
+    font-size: 2rem;
+    font-weight: 700;
+    height: auto;
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 32px;
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #f6f5f5;
+    box-shadow: 0 2px 20px 0 rgba(164, 164, 164, 0.42);
+    border-radius: 12px;
+  }
+
+  #removeBtn {
+    background: #01609a;
+    box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+    border-radius: 28px;
+    border-style: none;
+    color: white;
+    font-family: "Lato";
+    width: 175px;
+    height: 3rem;
+    cursor: pointer;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  #completeBtn {
+    background: #01609a;
+    box-shadow: -5px -5px 10px 0 #f3f3f3, 5px 5px 10px 0 #c9ccd7;
+    border-radius: 28px;
+    border-style: none;
+    color: white;
+    font-family: "Lato";
+    width: 175px;
+    height: 3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #todoItem {
+    font-size: 2rem;
+    font-weight: 700;
+    width: auto;
+    word-wrap: break-word;
+    margin-left: 2rem;
+  }
+}

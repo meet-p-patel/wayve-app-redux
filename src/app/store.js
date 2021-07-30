@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import moodReducer from '../features/MoodTracking/moodSlice';
 import strategiesReducer from '../features/SuggestStrategies/strategiesSlice';
 import btnColorReducer from '../features/SuggestStrategies/btnColorSlice';
+import todosReducer from '../features/ToDo/todosSlice';
 
 // convert object to string and store in localStorage
 function saveToLocalStorage(state) {
@@ -32,7 +33,8 @@ export const store = configureStore({
   reducer: {
     mood: moodReducer,
     strategies: strategiesReducer,
-    btnColor: btnColorReducer
+    btnColor: btnColorReducer,
+    todos: todosReducer
   },
   preloadedState
 });

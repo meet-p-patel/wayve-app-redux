@@ -105,7 +105,7 @@ export function CheckBox() {
                 }
                 <label htmlFor="descrip">would you like to provide details?</label>
                 <textarea onChange={updateDetailsControl} type="text" id="details" value={detailsState.details} placeholder=" details"></textarea>
-                <button className="SubmitButton">Submit</button>
+                <button className="SubmitButton">submit</button>
             </form>
             {errorMessage && <p id="errorMessage">{errorMessage.text}</p>}
         </div>
