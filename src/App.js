@@ -5,7 +5,7 @@ import { Feedback } from './features/Feedback/Feedback';
 import './App.css';
 import ReactGA from 'react-ga';
 import { CheckBox } from './features/MoodTracking/CheckBox';
-import { Todo } from './features/ToDo/Todo'; 
+import { Todo } from './features/Todo/Todo'; 
 
 function App() {
 
