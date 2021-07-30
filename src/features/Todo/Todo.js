@@ -25,6 +25,7 @@ export function Todo() {
           item: todoItem,
           completed: false,
       }));
+      setMessage('');
     }
 
     setTodoItem('');
