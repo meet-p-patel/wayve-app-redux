@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectTodos, addTodos, removeTodos, clearTodos, completeTodos } from './todosSlice';
 import './Todo.css';
+import ReactGA from 'react-ga';
 
 export function Todo() {
   const dispatch = useDispatch();
@@ -28,20 +29,40 @@ export function Todo() {
       setMessage('');
     }
 
+    ReactGA.event({
+      category: 'ToDo',
+      action: 'User added a todo item'
+    });
+
     setTodoItem('');
     document.getElementById('addBtn')[0] = '';
   }
 
   function remove(id) {
     dispatch(removeTodos(id));
+
+    ReactGA.event({
+      category: 'ToDo',
+      action: 'User removed a todo item'
+    });
   }
 
   function complete(id) {
     dispatch(completeTodos(id));
+
+    ReactGA.event({
+      category: 'ToDo',
+      action: 'User marked a todo item complete'
+    });
   }
 
   const clearAll = () => {
     dispatch(clearTodos());
+
+    ReactGA.event({
+      category: 'ToDo',
+      action: 'User cleared all todo items'
+    });
   }
 
   return (
